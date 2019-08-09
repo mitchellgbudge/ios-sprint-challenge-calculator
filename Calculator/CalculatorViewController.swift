@@ -22,9 +22,7 @@ class CalculatorViewController: UIViewController {
     // MARK: - Action Handlers
     
     @IBAction func operandTapped(_ sender: UIButton) {
-        if let digit = sender.titleLabel?.text {
-            outputLabel.text = brain?.addOperandDigit(digit)
-        }
+        
     }
     
     @IBAction func operatorTapped(_ sender: UIButton) {
