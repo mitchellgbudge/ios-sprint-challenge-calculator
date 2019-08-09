@@ -16,12 +16,15 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        brain = CalculatorBrain()
     }
     
     // MARK: - Action Handlers
     
     @IBAction func operandTapped(_ sender: UIButton) {
-
+        if let digit = sender.titleLabel?.text {
+            outputLabel.text = brain?.addOperandDigit(digit)
+        }
     }
     
     @IBAction func operatorTapped(_ sender: UIButton) {
